@@ -20,7 +20,7 @@ jobs:
       - name: Install pipenv
         run: pip install pipenv
       - name: Install dependencies
-        run: cd starter/backend && pipenv install
+        run: cd starter/backend && pipenv install --dev && pipenv run pip install flake8
       - name: Run linting
         run: cd starter/backend && pipenv run lint
       - name: Run tests
